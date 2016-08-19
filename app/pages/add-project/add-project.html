@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author"      content="Kagiso Phika">
+	
+	<title>Adding a Project</title>
+	
+	<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+	<link rel="stylesheet" href="../../../css/font-awesome.min.css">
+	<link rel="stylesheet" href="../../../css/bootstrap-theme.css" media="screen">
+	<link rel="stylesheet" href="../../../css/main.css" >
+	<link rel="stylesheet"href="../../../css/bootstrap.min.css">
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	<script src="assets/js/html5shiv.js"></script>
+	<script src="assets/js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<!-- Fixed navbar -->
+	<div class="navbar navbar-inverse navbar-fixed-top headroom" >
+		<div class="container">
+			<div class="navbar-header">
+				<!-- Button for smallest screens -->
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+				<a class="navbar-brand"><img src="../../images/tangentSolutions_white.png" alt="TangentSolutions" width="158" height="40"></a>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav pull-right">
+					<li><a href="../../index.html">Home</a></li>
+					<li><a href="../about/about.html">About</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">More Pages <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li class="active"><a href="add-project.html">AddProject</a></li>
+							<li><a href="../get-projects/get-projects.html">DeleteProject</a></li>
+                            <li><a href="../project-detail/project-detail.html">View</a></li>
+						</ul>
+					</li>
+	
+					<li class="active"><a class="btn" href="../login/login.html">SIGN IN </a></li>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+	</div> 
+	<!-- /.navbar -->
+
+	<header id="head" class="secondary"></header>
+
+	<!-- container -->
+	<div class="container">
+		
+		<ol class="breadcrumb">
+			<li><a href="../../index.html">Home</a></li>
+			<li class="active">Add A Project</li>
+		</ol>
+	</div>	<!-- /container -->
+	
+    <ion-toolbar>
+
+    <ion-title>
+        Add Project
+    </ion-title>
+
+    <ion-buttons end>
+        <button (click)="dismiss()">Cancel</button>
+    </ion-buttons>
+</ion-toolbar>
+
+<ion-content padding class="add-project">
+
+    <form #UpdateForm="ngForm" novalidate>
+        <ion-item>
+            <ion-label floating primary>Title</ion-label>
+            <ion-input [(ngModel)]="project.title" ngControl="title" type="text" #title="ngForm" required>
+            </ion-input>
+        </ion-item>
+        <p [hidden]="title.valid || submitted == false" danger padding-left>
+            title is required
+        </p>
+
+        <ion-item>
+            <ion-label floating primary>Description</ion-label>
+            <ion-input [(ngModel)]="project.description" ngControl="description" type="text" #description="ngForm" required>
+            </ion-input>
+        </ion-item>
+        <p [hidden]="description.valid || submitted == false" danger padding-left>
+            Description is required
+        </p>
+
+        <ion-item>
+            <ion-label>Start date</ion-label>
+            <ion-datetime displayFormat="YYYY-MM-DD" [(ngModel)]="project.start_date" ngControl="start_date" type="text" #start_date="ngForm" required></ion-datetime>
+        </ion-item>
+        <p [hidden]="start_date.valid || submitted == false" danger padding-left>
+            Start date is required
+        </p>
+
+        <ion-item>
+            <ion-label floating primary>End date</ion-label>
+            <ion-input [(ngModel)]="project.end_date" ngControl="end_date" type="text" #end_date="ngForm">
+            </ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label> Billable</ion-label>
+            <ion-toggle [(ngModel)]="project.is_billable" checked="project.is_billable"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+            <ion-label> Active</ion-label>
+            <ion-toggle [(ngModel)]="project.is_active" checked="project.is_active"></ion-toggle>
+        </ion-item>
+
+        <div padding>
+            <button (click)="onCreateProject(UpdateForm)" type="submit" primary block>Save</button>
+        </div>
+    </form>
+</ion-content>
+
+	
+
+	<footer id="footer" class="top-space">
+
+		<div class="footer2">
+			<div class="container">
+				<div class="row">
+					
+					<div class="col-md-6 widget">
+		
+					</div>
+
+					<div class="col-md-6 widget">
+						<div class="widget-body">
+							<p class="text-right">
+								Copyright &copy; 2016, Kagiso Phika.  
+							</p>
+						</div>
+					</div>
+
+				</div> <!-- /row of widgets -->
+			</div>
+		</div>
+	</footer>	
+		
+
+
+
+
+	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+	<script src="js/headroom.min.js"></script>
+	<script src="js/jQuery.headroom.min.js"></script>
+	<script src="js/template.js"></script>
+</body>
+</html>

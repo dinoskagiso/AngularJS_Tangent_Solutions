@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Kagiso Phika">
+	
+	
+	<title>Registration</title>
+
+	<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+	<link rel="stylesheet" href="../../../css/font-awesome.min.css">
+	<link rel="stylesheet" href="../../../css/bootstrap-theme.css" media="screen">
+	<link rel="stylesheet" href="../../../css/main.css" >
+	<link rel="stylesheet"href="../../../css/bootstrap.min.css">
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	<script src="assets/js/html5shiv.js"></script>
+	<script src="assets/js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<!-- Fixed navbar -->
+	<div class="navbar navbar-inverse navbar-fixed-top headroom" >
+		<div class="container">
+			<div class="navbar-header">
+				<!-- Button for smallest screens -->
+			<a class="navbar-brand"><img src="../../images/tangentSolutions_white.png" alt="TangentSolutions" width="158" height="40"></a>
+		  </div>
+			<!--<div class="navbar-collapse collapse">
+					<li class="active"><a class="btn" href="signin.html">SIGN IN </a></li>
+				</ul>
+			</div>/.nav-collapse -->
+		</div>
+	</div> 
+	<!-- /.navbar -->
+
+	<header id="head" class="secondary"></header>
+
+	<!-- container -->
+	<div class="container">
+
+		<ol class="breadcrumb">
+			<li><a href="../../index.html">Home</a></li>
+			<li class="active">Login</li>
+		</ol>
+
+		<div class="row">
+			
+			<!-- Article main content -->
+		<article class="col-xs-12 maincontent">
+				<header class="page-header">
+					<h1 class="page-title">Sign in</h1>
+				</header>
+				<ion-content>
+
+           <form #loginForm="ngForm" novalidate>
+            <center> <a href="../signup/signup.html">Signup</a></center>
+            <ion-item>
+            
+                <ion-label floating primary>Username</ion-label>
+                <ion-input [(ngModel)]="login.username" ngControl="username" type="text" #username="ngForm" required>
+                </ion-input>
+            </ion-item>
+            <p [hidden]="username.valid || submitted == false" danger padding-left>
+                Username is required
+            </p>
+
+            <ion-item>
+                <ion-label floating primary>Password</ion-label>
+                <ion-input [(ngModel)]="login.password" ngControl="password" type="password" #password="ngForm" required>
+                </ion-input>
+            </ion-item>
+            <p [hidden]="password.valid || submitted == false" danger padding-left>
+                Password is required
+            </p>
+
+            <ion-row responsive-sm>
+                <ion-col>
+                    <button (click)="onLogin(loginForm)" type="submit" primary block>Login</button>
+                </ion-col>
+     
+            </ion-row>
+        </form>
+    </ion-list>
+</ion-content>
+	
+<footer id="footer" class="top-space">
+
+		<div class="footer2">
+			<div class="container">
+				<div class="row">
+					
+					<div class="col-md-6 widget">
+		
+					</div>
+
+					<div class="col-md-6 widget">
+						<div class="widget-body">
+							<p class="text-right">
+								Copyright &copy; 2016, Kagiso Phika.  
+							</p>
+						</div>
+					</div>
+
+				</div> <!-- /row of widgets -->
+			</div>
+		</div>
+	</footer>	
+
+
+
+	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+	<script src="js/headroom.min.js"></script>
+	<script src="js/jQuery.headroom.min.js"></script>
+	<script src="js/template.js"></script>
+</body>
+</html>
+
+
+<!--<form ng-submit="register()">
+  <input type="text" class="form-control" ng-model="registerUsername" placeholder="Username">
+  <input type="password" class="form-control" ng-model="registerPassword" placeholder="Password">
+  <input type="submit" class="btn btn-default" value="Submit">
+</form>-->

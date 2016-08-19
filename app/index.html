@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Tangent Solutions</title>
+    <meta charset="utf-8">
+	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Kagiso Phika">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css 
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+	<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+	<link rel="stylesheet" href="../css/font-awesome.min.css">
+	<link rel="stylesheet" href="../css/font-awesome.min.css" media="screen">
+	<link rel="stylesheet" href="../css/main.css" >
+	<link rel="stylesheet"href="../css/bootstrap.min.css">
+  </head>
+  <body>
+    <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+	<div class="navbar navbar-inverse navbar-fixed-top headroom" >
+		<div class="container">
+		
+			<div class="navbar-header">
+				<a class="navbar-brand"><img src="images/tangentSolutions_white.png" alt="TangentSolutions" width="158" height="40"></a>
+			
+		  </div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav pull-right">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="pages/about/about.html">About</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Add/View/Delete Project <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="pages/add-project/add-project.html">Add Project</a></li>
+							<li class="active"><a href="pages/get-projects/get-projects.html">Delete Project</a></li>
+						</ul>
+					</li>
+					<li class="active"><a class="btn" href="pages/login/login.html">SIGN IN </a></li>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+	</div> 
+	<!-- /.navbar -->
+	 <h1>Projects List<h1>
+	   
+     <ion-navbar *navbar>
+    <button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>List</ion-title>
+</ion-navbar>
+<ion-content>
+  
+    <ion-list>
+        <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
+            <ion-icon [name]="item.icon" item-left></ion-icon>
+            {{item.title}}
+            <div class="item-note" item-right>
+                {{item.note}}
+            </div>
+        </button>
+    </ion-list>
+    <div *ngIf="selectedItem" padding>
+        Select List Items <b>{{selectedItem.title}}</b>
+    </div>
+</ion-content> 
+  		
+
+
+
+	
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/auth.js"></script>
+        <script src="scripts/controllers/dashboard.js"></script>
+		<script src="scripts/services/auth.js"></script>
+        <!-- endbuild -->
+</body>
+<footer id="footer" class="top-space">
+
+		<div class="footer2">
+			<div class="container">
+				<div class="row">
+					
+					<div class="col-md-6 widget">
+		
+					</div>
+
+					<div class="col-md-6 widget">
+						<div class="widget-body">
+							<p class="text-right">
+								Copyright &copy; 2016, Kagiso Phika.  
+							</p>
+						</div>
+					</div>
+
+				</div> <!-- /row of widgets -->
+			</div>
+		</div>
+	</footer>	
+</html>
