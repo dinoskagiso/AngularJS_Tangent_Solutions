@@ -1,13 +1,59 @@
-Tangent Solutions
+# AngularJS_Tangent_Solutions generator 
 
-Practical Assignment � AngularJS
+> Yeoman generator for AngularJS_Tangent_Solutions  - lets you quickly set up a project for test.
 
-The ability to architect an application using Yeoman ( http://yeoman.io/ and https://github.com/yeoman/generatorangular) The ability to build a beautifully styled frontend using Twitter Bootstrap Ability to call a web service (userservice and projectservice) as described below Ability to build a login with authentication Ability to perform basic listing and viewing of the data using project service. Summary
+## Requirements
 
-Build an application that will present the user with a login, after login they will see a list of projects and tasks. Bonus: with the ability to add, edit and delete the project listing.
+Build an AngularJS frontend using AngularJS 1 or 2 that demonstrates the following:
+  - The ability to architect an application using Yeoman ( http://yeoman.io/ and https://github.com/yeoman/generatorangular)
+  - The ability to build a beautifully styled frontend using Twitter Bootstrap
+  - Ability to call a web service (userservice and projectservice) as below
+  - Ability to build a login with authentication
+  - Ability to perform basic listing, viewing and editing on the application using project
+service. Create a view that lists all projects and the ability to add, edit, view details and
+delete a project.
 
-Libraries & Tools
+## Usage
 
-The functionality has been implemented by integrating the following 3rd-party tools and libraries:
+install npm
+```sh
+npm install
+```
 
-TypeScript: A typed superset of JavaScript that compiles to plain JavaScript AngularJS v1: Superheroic JavaScript MVW Framework Twitter Bootstrap v3: HTML, CSS, and JS framework for developing responsive, mobile first projects on the web Font Awesome: The iconic font and CSS toolkit Gulp: Streaming build system and task runner Bower: A package manager for the web (client-side) TSD: TypeScript Definition manager for DefinitelyTyped Node.js: JavaScript runtime environment for server-side development Karma: Spectacular Test Runner for Javascript Mocha: The fun, simple, flexible JavaScript test framework Sinon: Standalone test spies, stubs and mocks for JavaScript
+git clone  https://github.com/dinoskagiso/AngularJS_Tangent_Solutions.git
+
+```
+Run `grunt test --force `, to connect to your app:
+```
+Run `grunt` for building and `grunt serve` for preview
+
+### CoffeeScript and TypeScript
+For generators that output scripts, the `--typescript` will output TypeScript instead of JavaScript.
+
+For example:
+```bash
+yo angular:controller user --typescript
+```
+
+A project mix TypeScript and JavaScript files.
+
+## Testing
+
+Running `grunt test` will run the unit tests with karma.
+
+#Checklist
+
+Requirements:**
+
+  - View projects--DONE
+  - Edit Projects--DONE
+  - Save Projects --DONE
+  - Delete Projects--DONE
+  - Create Projects--DONE
+  - Add a refresh Icon--DONE
+  - The ability to build a beautifully styled frontend using Twitter Bootstrap --DONE
+  - Ability to build a login with authentication -- DONE
+ 
+  
+
+
