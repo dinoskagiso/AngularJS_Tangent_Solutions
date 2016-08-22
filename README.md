@@ -24,7 +24,12 @@ install npm
 ```sh
 npm install
 ```
-git clone  https://github.com/dinoskagiso/AngularJS_Tangent_Solutions.git && cd AngularJS_Tangent_Solutions
+
+Make a new directory, and `cd` into it:
+```
+AngularJS_Tangent_Solutions && cd $_
+
+git clone  https://github.com/dinoskagiso/AngularJS_Tangent_Solutions.git 
 
 ```
 Run `grunt test --force `, to connect to your app:
