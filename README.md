@@ -1,4 +1,7 @@
-# AngularJS_Tangent_Solutions generator 
+Tangent Solutions Assignment. Practical Assignment – AngularJS FrontEnd
+
+> “project” : Interview Assignment
+> “project_category” : AngularJS FrontEnd
 
 > Yeoman generator for AngularJS_Tangent_Solutions  - lets you quickly set up a project for test.
 
@@ -15,12 +18,13 @@ delete a project.
 
 ## Usage
 
+To install this on a windows machine 
+
 install npm
 ```sh
 npm install
 ```
-
-git clone  https://github.com/dinoskagiso/AngularJS_Tangent_Solutions.git
+git clone  https://github.com/dinoskagiso/AngularJS_Tangent_Solutions.git && cd AngularJS_Tangent_Solutions
 
 ```
 Run `grunt test --force `, to connect to your app:
